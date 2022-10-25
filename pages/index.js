@@ -1,8 +1,14 @@
 import Head from 'next/head'
 import styles from '../styles/Evernote.module.scss'
 import NoteOperations from '../components/NoteOperations'
+import { useState } from 'react'
 
 export default function Home() {
+  const [ID, setID] = useState(null);
+  const getSingleNote = (id) => {
+    setID(id)
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +21,7 @@ export default function Home() {
 
         <div className={styles.container}>
           <div className={styles.left}>
-            <NoteOperations />
+            <NoteOperations getSingleNote={getSingleNote} />
           </div>
           <div className={styles.right}>
             Right

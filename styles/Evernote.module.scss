@@ -48,3 +48,18 @@ $dark-red: rgb(119, 27, 27);
 .ReactQuill{
     width: 15rem;
 }
+
+.notesInner{
+    margin-top: 0.5rem;
+    border: 1px solid $dark-red;
+    border-radius: 10px;
+    width: 15rem;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Roboto";
+}
+
+.notesInner:hover{
+    background-color: $dark-red;
+    color: whitesmoke;
+}
