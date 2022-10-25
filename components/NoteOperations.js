@@ -1,10 +1,13 @@
 import styles from '../styles/Evernote.module.scss'
 import { useState, useEffect } from 'react'
-import { app, db } from '../firebaseConfig'
+import { app, db } from '../app/firebaseConfig'
 import { collection, addDoc, getDocs } from 'firebase/firestore'
 import dynamic from 'next/dynamic'
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false })
 import 'react-quill/dist/quill.snow.css';
+
+
+export const dbInstance = collection(db, 'notes');
 
 export default function NoteOperations({getSingleNote}) {
     const [noteDesc, setNoteDesc] = useState('')
@@ -19,7 +22,6 @@ export default function NoteOperations({getSingleNote}) {
 
     const [noteTitle, setNoteTitle] = useState('');
 
-    const dbInstance = collection(db, 'notes')
     const saveNote = () => {
         addDoc(dbInstance, {
             noteTitle: noteTitle,
@@ -86,7 +88,7 @@ export default function NoteOperations({getSingleNote}) {
                             className={styles.notesInner}
                             onClick={() => getSingleNote(note.id)}>
                             <h4>{note.noteTitle}</h4>
-                            <p dangerouslySetInnerHTML={{ __html: note.noteDesc }} />
+                            {/* <p dangerouslySetInnerHTML={{ __html: note.noteDesc }} /> */}
                         </div>
                     )
                 })}

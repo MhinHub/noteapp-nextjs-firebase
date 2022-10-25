@@ -63,3 +63,13 @@ $dark-red: rgb(119, 27, 27);
     background-color: $dark-red;
     color: whitesmoke;
 }
+
+.editBtn, .deleteBtn{
+    width: 5rem;
+    height: 2rem;
+    background-color: $dark-red;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    margin: 10px 10px 10px 0;
+}

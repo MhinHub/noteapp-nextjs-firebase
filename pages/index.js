@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Evernote.module.scss'
 import NoteOperations from '../components/NoteOperations'
+import NoteDetails from '../components/NoteDetails'
 import { useState } from 'react'
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
             <NoteOperations getSingleNote={getSingleNote} />
           </div>
           <div className={styles.right}>
-            Right
+            <NoteDetails ID={ID} />
           </div>
         </div>
 
