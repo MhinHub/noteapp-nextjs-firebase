@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$dark-red: rgb(119, 27, 27);
+
+.container {
+    display: flex;
+    margin: 3em auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    width: 20rem;
+
+}
+
+.button {
+    width: 15rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.inputContainer {
+    width: 15rem;
+    height: 2rem;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin: 5px 0;
+    padding: 0 5px;
+}
+
+.saveBtn{
+    width: 15rem;
+    height: 2rem;
+    margin-top: 1em;
+    cursor: pointer;
+    background-color: $dark-red;
+    color: whitesmoke;
+    border: $dark-red;
+    font-family: 'Roboto';
+}
+
+.ReactQuill{
+    width: 15rem;
+}
